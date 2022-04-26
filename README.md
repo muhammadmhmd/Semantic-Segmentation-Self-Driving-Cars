@@ -22,9 +22,11 @@ file anotasi merupakan gambar segmentasi pixel yang berisi dengan angka dari set
   <img src="https://github.com/muhammadmhmd/Semantic-Segmentation-Self-Driving-Cars/blob/main/Images/3.png" alt="input array"/>
 </p>
 Anotasi tidak bisa langsung divisualisasikan karena array anotasi bukan array pixel gambar, sehingga perlu dilakukan color mapping, hal ini dapat dilakukan oleh library matplotlib dengna preset color map yang sudah ada, tetapi project ini akan mendefinisikan color map baru. Menurut informasi dataset terdapat 11 kelas ditambah dengan 1 background sehingga terdapat 12 kelas dalam dataset. Setiap kelas ini didefinisikan warna channel rgb nya kemudian dapat ditampilkan
+
 <p align="center">
   <img src="https://github.com/muhammadmhmd/Semantic-Segmentation-Self-Driving-Cars/blob/main/Images/4.png" alt="input array"/>
 </p>
+
 Diatas merupakan hasil tampilan anotasi sebelum dan sesudah di color mapping. Dengan color mapping sebagai berikut
 <p align="center">
   <img src="https://github.com/muhammadmhmd/Semantic-Segmentation-Self-Driving-Cars/blob/main/Images/5.png" alt="color mapping"/>
@@ -80,12 +82,14 @@ dalam project ini, model neural network yang saya gunakan untuk proses training 
 <p align="center">
   <img src="https://github.com/muhammadmhmd/Semantic-Segmentation-Self-Driving-Cars/blob/main/Images/12.png" alt="unet"/>
 </p> 
+
 U-Net terdiri dari jalur kontrak dan jalur ekspansif. Jalur kontrak mengikuti arsitektur khas jaringan konvolusi. Ini terdiri dari aplikasi berulang dari dua konvolusi dan operasi pooling untuk downsampling. Pada setiap langkah downsampling, kami menggandakan jumlah saluran fitur. Setiap langkah di jalur ekspansif terdiri dari upsampling peta fitur diikuti oleh konvolusi yang membagi dua jumlah saluran fitur, penggabungan dengan peta fitur yang dipangkas sesuai dari jalur kontrak, dan dua konvolusi. Pemangkasan diperlukan karena hilangnya piksel batas di setiap konvolusi. Pada lapisan terakhir, konvolusi 1x1 digunakan untuk memetakan setiap vektor fitur ke jumlah kelas yang diinginkan. [Source](https://paperswithcode.com/method/u-net#:~:text=U%2DNet%20is%20an%20architecture,architecture%20of%20a%20convolutional%20network.)
 
 ### 3.2	FCN8s
 <p align="center">
   <img src="https://github.com/muhammadmhmd/Semantic-Segmentation-Self-Driving-Cars/blob/main/Images/13.png" alt="fcn8s"/>
 </p> 
+
 FCN terdiri dari 5 blok layer konvolusi dan dekonvolusi(upsampling) untuk menghasilkan output. dekonvolusi FCN tanpa penggabungan dengan sampel konvolusi sebelumnya dinamakan network FCN32s. Dekonvolusi FCN dengan penggabungan dengan sampel konvolusi sekali (dengan layer pool4) dinamakan network FCN16s. dan Dekonvolusi FCN dengan penggabungan dengan sampel konvolusi 2 kali (dengan layer pool4 dan pool3)  dinamakan network FCN8s. Hal ini karena, fitur yang dalam dapat diperoleh saat masuk lebih dalam, informasi lokasi spasial juga hilang saat masuk lebih dalam. Itu berarti keluaran dari lapisan yang lebih dangkal memiliki lebih banyak informasi lokasi. Jika kita menggabungkan keduanya, kita dapat meningkatkan hasilnya.[Source](https://towardsdatascience.com/review-fcn-semantic-segmentation-eb8c9b50d2d1)
 
 ### 3.3	SegNet
