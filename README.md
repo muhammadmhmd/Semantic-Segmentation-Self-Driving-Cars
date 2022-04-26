@@ -123,9 +123,9 @@ Pada project ini telah dilakukan semantic segmentation dengan menggunakan 3 mode
 ## 6. Saran
 Pada project ini pembuatan model dilakukan dengan menyusun dari awal dengan layer keras tensorflor, sehingga perlu diperhatikan keseuaian setiap blok layer dalam penyusunan. Untuk memudahkan, bisa memakai tranfer learning untuk meringkas layer.
 
-## Sumber
-##### https://towardsdatascience.com/review-fcn-semantic-segmentation-eb8c9b50d2d1
-##### https://paperswithcode.com/method/u-net#:~:text=U%2DNet%20is%20an%20architecture,architecture%20of%20a%20convolutional%20network. 
-##### https://www.researchgate.net/publication/349439499_Uncertainty-Aware_Deep_Learning_for_Safe_Landing_Site_Selection 
-##### https://www.jeremyjordan.me/semantic-segmentation/#skip_connections 
-##### https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2 
+## Sources
+ https://towardsdatascience.com/review-fcn-semantic-segmentation-eb8c9b50d2d1
+ https://paperswithcode.com/method/u-net#:~:text=U%2DNet%20is%20an%20architecture,architecture%20of%20a%20convolutional%20network. 
+ https://www.researchgate.net/publication/349439499_Uncertainty-Aware_Deep_Learning_for_Safe_Landing_Site_Selection 
+ https://www.jeremyjordan.me/semantic-segmentation/#skip_connections 
+ https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2 
